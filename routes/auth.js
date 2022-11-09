@@ -14,6 +14,7 @@ router.post('/',[
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
+    
     User.create({
         name: req.body.name,
         password: req.body.password,
